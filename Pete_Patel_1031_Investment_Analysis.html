@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pete Patel Investment Analysis — 1031 Exchange Ranked Report | Verandah Properties</title>
+<style>
+:root {
+    --teal: #008C82;
+    --teal-dark: #006661;
+    --gold: #D4AF50;
+    --gold-light: #E8D094;
+    --green: #2d8a3e;
+    --green-bg: #f0f7f1;
+    --amber: #c9a227;
+    --amber-bg: #fbf8ee;
+    --red: #b8392e;
+    --red-bg: #fbf0ee;
+    --ink: #1a1a1a;
+    --body: #2a2a2a;
+    --muted: #666;
+    --light-muted: #888;
+    --border: #e5e5e5;
+    --bg: #fafafa;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--body); line-height: 1.55; font-size: 16px; background: #fff; }
+.serif { font-family: 'Georgia', 'Times New Roman', serif; }
+.container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+.report-header {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: white;
+    padding: 48px 0 56px 0;
+    border-bottom: 4px solid var(--gold);
+}
+.report-header .brand { font-family: 'Georgia', serif; font-size: 18px; letter-spacing: 2px; color: var(--gold-light); text-transform: uppercase; margin-bottom: 8px; }
+.report-header h1 { font-family: 'Georgia', serif; font-size: 38px; font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
+.report-header .subtitle { font-size: 17px; color: rgba(255,255,255,0.9); margin-bottom: 24px; max-width: 750px; }
+.report-header .meta { display: flex; gap: 32px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 14px; }
+.report-header .meta div b { display: block; font-size: 11px; letter-spacing: 1px; color: var(--gold-light); text-transform: uppercase; margin-bottom: 4px; }
+
+section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+section h2 { font-family: 'Georgia', serif; font-size: 28px; color: var(--teal); margin-bottom: 8px; font-weight: 700; }
+section h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--gold); margin-top: 8px; }
+section .section-intro { font-size: 15px; color: var(--muted); margin-bottom: 32px; max-width: 750px; }
+
+.summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+.summary-card { background: var(--bg); border-left: 4px solid var(--teal); padding: 16px; border-radius: 4px; }
+.summary-card .label { font-size: 11px; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; margin-bottom: 4px; }
+.summary-card .value { font-family: 'Georgia', serif; font-size: 24px; color: var(--ink); font-weight: 700; }
+.summary-card .value-sub { font-size: 12px; color: var(--light-muted); margin-top: 2px; }
+.summary-card.gold { border-left-color: var(--gold); }
+.summary-card.green { border-left-color: var(--green); }
+.summary-card.amber { border-left-color: var(--amber); }
+
+.callout-1031 {
+    background: linear-gradient(135deg, #fef9e7 0%, #fdfaf0 100%);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.callout-1031 h3 { font-family: 'Georgia', serif; color: var(--gold); font-size: 22px; margin-bottom: 12px; }
+.callout-1031 .timeline-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+.callout-1031 .timeline-item { background: white; padding: 14px; border-radius: 4px; border-left: 3px solid var(--gold); }
+.callout-1031 .timeline-item .day-num { font-family: 'Georgia', serif; font-size: 28px; color: var(--gold); font-weight: bold; line-height: 1; }
+.callout-1031 .timeline-item .day-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+.callout-1031 .timeline-item .day-desc { font-size: 13px; color: var(--body); margin-top: 6px; }
+
+.top-recs { margin-bottom: 32px; }
+.top-recs h3 { font-family: 'Georgia', serif; font-size: 20px; color: var(--ink); margin-bottom: 16px; }
+.rec-item { background: var(--green-bg); border-left: 4px solid var(--green); padding: 14px 18px; margin-bottom: 10px; border-radius: 4px; }
+.rec-item .rank { display: inline-block; background: var(--green); color: white; font-weight: bold; width: 28px; height: 28px; line-height: 28px; text-align: center; border-radius: 50%; font-size: 13px; margin-right: 12px; }
+.rec-item .name { font-weight: bold; font-size: 16px; color: var(--ink); }
+.rec-item .desc { font-size: 14px; color: var(--body); margin-top: 4px; margin-left: 40px; }
+.bottom-recs .rec-item { background: var(--red-bg); border-left-color: var(--red); }
+.bottom-recs .rec-item .rank { background: var(--red); }
+
+.ranking-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 24px; }
+.ranking-table th { background: var(--teal); color: white; padding: 12px 8px; text-align: left; font-weight: 600; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; }
+.ranking-table th.numeric { text-align: right; }
+.ranking-table td { padding: 12px 8px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.ranking-table td.numeric { text-align: right; font-variant-numeric: tabular-nums; }
+.ranking-table tr:hover { background: var(--bg); }
+.ranking-table tr:hover a { text-decoration: underline; }
+.ranking-table .rank-cell { font-family: 'Georgia', serif; font-size: 22px; font-weight: bold; color: var(--teal); width: 50px; text-align: center; }
+.ranking-table .name-cell { font-weight: 600; }
+.ranking-table .name-cell a { color: var(--ink); text-decoration: none; }
+.ranking-table .subdiv-cell { font-size: 11px; color: var(--muted); display: block; }
+.score-bar { display: inline-block; width: 60px; height: 6px; background: #e5e5e5; border-radius: 3px; overflow: hidden; margin-right: 8px; vertical-align: middle; }
+.score-bar-fill { display: block; height: 100%; }
+.score-fav { background: var(--green); }
+.score-neu { background: var(--amber); }
+.score-cau { background: var(--red); }
+.pos { color: var(--green); font-weight: 600; }
+.neg { color: var(--red); font-weight: 600; }
+
+.methodology { background: var(--bg); border-radius: 8px; padding: 24px; margin-bottom: 16px; }
+.methodology h3 { font-family: 'Georgia', serif; color: var(--teal); margin-bottom: 12px; }
+.weight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 24px; margin-top: 12px; }
+.weight-item { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dotted var(--border); font-size: 14px; }
+.weight-item .pct { font-weight: bold; color: var(--teal); font-family: 'Georgia', serif; }
+
+.property-detail { margin-bottom: 56px; padding-top: 24px; border-top: 2px solid var(--gold); scroll-margin-top: 24px; }
+.property-detail .rank-banner { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+.property-detail .rank-num { font-family: 'Georgia', serif; font-size: 56px; color: var(--teal); font-weight: 700; line-height: 1; }
+.property-detail .rank-badge { background: var(--gold); color: white; padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
+.property-detail h3 { font-family: 'Georgia', serif; font-size: 28px; color: var(--ink); margin-bottom: 4px; }
+.property-detail .subdiv-line { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+.property-detail .composite-score { display: flex; align-items: center; gap: 16px; background: var(--bg); padding: 16px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--teal); }
+.property-detail .composite-score .score-num { font-family: 'Georgia', serif; font-size: 42px; font-weight: bold; color: var(--teal); line-height: 1; }
+.property-detail .composite-score .score-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.property-detail .composite-score .score-tagline { flex: 1; font-size: 14px; color: var(--body); font-style: italic; }
+.property-detail .metrics-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 16px; }
+.property-detail .mini-metric { background: var(--bg); padding: 10px; border-left: 3px solid var(--teal); border-radius: 0 4px 4px 0; }
+.property-detail .mini-metric .label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.property-detail .mini-metric .value { font-family: 'Georgia', serif; font-size: 16px; font-weight: bold; color: var(--ink); margin-top: 2px; }
+.property-detail .mini-metric.green { border-left-color: var(--green); }
+.property-detail .mini-metric.green .value { color: var(--green); }
+.property-detail .mini-metric.red { border-left-color: var(--red); }
+.property-detail .mini-metric.red .value { color: var(--red); }
+.property-detail .mini-metric.amber { border-left-color: var(--amber); }
+.property-detail .mini-metric.amber .value { color: var(--amber); }
+.property-detail .mini-metric.gold { border-left-color: var(--gold); }
+.property-detail .insight-block { padding: 16px; border-radius: 4px; font-size: 14px; margin-bottom: 12px; border-left: 3px solid var(--gold); background: var(--bg); }
+.property-detail .insight-block.green { border-left-color: var(--green); background: var(--green-bg); }
+.property-detail .insight-block.amber { border-left-color: var(--amber); background: var(--amber-bg); }
+.property-detail .insight-block.red { border-left-color: var(--red); background: var(--red-bg); }
+.property-detail .insight-block b { color: var(--teal); }
+.property-detail .insight-block.green b { color: var(--green); }
+.property-detail .insight-block.amber b { color: var(--amber); }
+.property-detail .insight-block.red b { color: var(--red); }
+.back-to-top { display: inline-block; margin-top: 12px; color: var(--teal); text-decoration: none; font-size: 13px; font-weight: 600; }
+.back-to-top:hover { text-decoration: underline; }
+
+.action-block { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 14px; }
+.action-block h4 { color: var(--teal); font-family: 'Georgia', serif; font-size: 18px; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; }
+.action-block h4 .step-num { background: var(--gold); color: white; width: 32px; height: 32px; border-radius: 50%; line-height: 32px; text-align: center; font-size: 16px; font-weight: bold; }
+.action-block p { font-size: 14px; color: var(--body); margin-bottom: 6px; }
+.action-block ul { margin-left: 20px; font-size: 14px; }
+.action-block li { padding: 3px 0; }
+
+.report-footer { background: var(--ink); color: white; padding: 32px 0; text-align: center; font-size: 13px; }
+.report-footer .brand { font-family: 'Georgia', serif; font-size: 18px; color: var(--gold); margin-bottom: 8px; }
+.report-footer .disclaimer { color: rgba(255,255,255,0.6); font-size: 11px; margin-top: 12px; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+@media (max-width: 768px) {
+    .summary-grid { grid-template-columns: repeat(2, 1fr); }
+    .weight-grid, .callout-1031 .timeline-grid { grid-template-columns: 1fr; }
+    .property-detail .metrics-row { grid-template-columns: repeat(3, 1fr); }
+    .ranking-table { font-size: 11px; }
+    .ranking-table th, .ranking-table td { padding: 8px 4px; }
+    .report-header h1 { font-size: 28px; }
+    section h2 { font-size: 22px; }
+    .property-detail .rank-num { font-size: 40px; }
+}
+</style>
+</head>
+<body>
+
+<header class="report-header" id="top">
+    <div class="container">
+        <div class="brand">Verandah Properties · 1031 Exchange Investment Analysis</div>
+        <h1>11-Property Ranked Report for 1031 Replacement</h1>
+        <p class="subtitle">Investment analysis prepared for Pete Patel — replacement property identification for Philadelphia 1031 exchange. $300,000 cash position with mortgage flexibility for higher-value targets.</p>
+        <div class="meta">
+            <div><b>Prepared By</b>Pamela Syvertson, Owner &amp; Broker</div>
+            <div><b>Report Date</b>May 4, 2026</div>
+            <div><b>Properties Analyzed</b>11 active listings</div>
+            <div><b>Strategy</b>1031 replacement · long-term unfurnished rental hold</div>
+        </div>
+    </div>
+</header>
+
+<section id="executive-summary">
+    <div class="container">
+        <h2>Executive Summary</h2>
+        <p class="section-intro">Eleven shortlisted Lake Nona &amp; St. Cloud properties evaluated through a 1031-specific lens — accounting for your timeline pressure, $300K cash deployment, and the carry impact of an investor mortgage on properties above your cash position.</p>
+
+        <div class="callout-1031">
+            <h3>📋 Your 1031 Exchange Framework</h3>
+            <p style="font-size: 14.5px; color: var(--body); line-height: 1.6;">
+                With your Philadelphia property listing in early June 2026, the 1031 timeline below applies. To fully defer capital gains, the replacement property must be of <b>equal or greater value</b> than your Philadelphia sale, all proceeds must be reinvested, and any cash held back becomes "boot" subject to tax. Mortgage debt on the replacement substitutes for any debt that was paid off on the Philly property.
+            </p>
+            <div class="timeline-grid">
+                <div class="timeline-item">
+                    <div class="day-num">Day 0</div>
+                    <div class="day-label">Philly Closes</div>
+                    <div class="day-desc">Sale proceeds transfer to qualified intermediary. Your 1031 exchange clock starts.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="day-num">Day 45</div>
+                    <div class="day-label">ID Deadline</div>
+                    <div class="day-desc">You must identify up to 3 replacement properties in writing. The "three property rule" is the safe-harbor approach.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="day-num">Day 180</div>
+                    <div class="day-label">Close Deadline</div>
+                    <div class="day-desc">All identified replacement properties must be closed by this date for full tax deferral.</div>
+                </div>
+            </div>
+            <p style="font-size: 13px; color: var(--muted); margin-top: 14px; font-style: italic;">
+                <b>Important:</b> This analysis assumes your Philadelphia sale price equals or exceeds the replacement property price. If your Philly sale is below your replacement target, additional cash from outside the exchange would be required. Verandah recommends confirming your Philly sale expectation with your CPA before finalizing identification.
+            </p>
+        </div>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="label">Set Price Range</div>
+                <div class="value">$304K–$409K</div>
+                <div class="value-sub">9 of 11 above your $300K cash</div>
+            </div>
+            <div class="summary-card gold">
+                <div class="label">Your Cash Position</div>
+                <div class="value">$300,000</div>
+                <div class="value-sub">Deployed fully on 9 properties</div>
+            </div>
+            <div class="summary-card green">
+                <div class="label">Mortgage Range Needed</div>
+                <div class="value">$5K–$109K</div>
+                <div class="value-sub">At 7.25% investor rate, 30-yr fixed</div>
+            </div>
+            <div class="summary-card amber">
+                <div class="label">Top 3 Cash Flow</div>
+                <div class="value">$1,500+/mo</div>
+                <div class="value-sub">Before mgmt/vacancy/capex</div>
+            </div>
+        </div>
+
+        <div class="top-recs">
+            <h3 style="color: var(--green);">▲ Top 3 Recommendations for Your 1031</h3>
+            <div class="rec-item">
+                <span class="rank">1</span><span class="name">Sunridge Loop (Suncrest REO) — $315,000</span>
+                <div class="desc">Largest AVM discount in set (+7.7%) and the smallest mortgage of any qualified candidate ($15K). Bank-owned with two-year clearance pressure means you can likely negotiate to $290–300K cash. With only $15K mortgaged, monthly debt service is just $102, producing the best cash flow in the set ($1,523/mo) and a 6.1% cash-on-cash return. REO timeline is 45-60 days — fits your 1031 window comfortably.</div>
+            </div>
+            <div class="rec-item">
+                <span class="rank">2</span><span class="name">Sunkissed Drive (Suncrest) — $304,990</span>
+                <div class="desc">Nearly all-cash deployment with just a $5K mortgage. The cleanest transaction in the set — private vacant seller, dual-track sale-and-rent listing, identical sister-unit to Sunridge with a verified $2,150 active rental ask. 30-day close possible, ideal for 1031 timeline pressure. Lowest negotiation friction of any property here.</div>
+            </div>
+            <div class="rec-item">
+                <span class="rank">3</span><span class="name">Citruswood Drive (Lake Nona) — $359,990</span>
+                <div class="desc">The only true Lake Nona 32832 address with a workable mortgage profile ($60K). Highest gross yield in set (9.03%), 4-bedroom layout with first-floor primary suite, premier Innovation High school zone. LLC investor seller is rational — likely takes $342–352K cash. Strong long-term appreciation upside given Lake Nona corridor demand.</div>
+            </div>
+        </div>
+
+        <div class="top-recs bottom-recs">
+            <h3 style="color: var(--red);">▼ Avoid or Pursue with Caution</h3>
+            <div class="rec-item">
+                <span class="rank">11</span><span class="name">Town Lake Drive (Ravinia · FLOOD ZONE)</span>
+                <div class="desc">Largest required mortgage ($109K), heaviest carrying cost in set, and the only property with FEMA Zone AE flood designation requiring mandatory insurance. Lowest cash-on-cash (3.0%) and the seller has refused any price reductions in 92 days — no negotiation leverage. Pass.</div>
+            </div>
+            <div class="rec-item">
+                <span class="rank">10</span><span class="name">Jubiloso Drive (Sola Vista) — $397,950</span>
+                <div class="desc">Detached SFR with the largest lot, but the $98K mortgage produces 4.4% cash-on-cash — middling. Mild seller motivation (single $1,000 cut), broker-owned with no disclosure, weak school zone. Better mortgage-light alternatives in the top 6.</div>
+            </div>
+        </div>
+
+        <div class="rec-item" style="background: #fff7e6; border-left: 4px solid var(--amber); margin-top: 16px;">
+            <p style="margin: 0; font-size: 14px;"><b style="color: var(--amber);">📍 Note on Cyrils Drive (rank 6) — Weslyn Park:</b> You've already toured Weslyn Park, so this property has community-familiarity advantage. It scores 6th in this analysis primarily because the heaviest HOA in the set ($5,316/yr) creates a permanent yield drag. The paid-off solar and motivated seller are real strengths. If you have a strong preference for Weslyn Park based on your tour, this is the version of that community currently on market.</p>
+        </div>
+    </div>
+</section>
+
+<section id="ranking">
+    <div class="container">
+        <h2>Master Ranking — Best to Worst (1031 Lens)</h2>
+        <p class="section-intro">All 11 properties scored under your specific scenario: deploy full $300K cash, mortgage only the difference at 7.25% investor rate. Click any property name to jump to its full detail block.</p>
+
+        <table class="ranking-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Property</th>
+                    <th class="numeric">List</th>
+                    <th class="numeric">Mortgage</th>
+                    <th class="numeric">Debt Svc</th>
+                    <th class="numeric">Mo Cash Flow</th>
+                    <th class="numeric">Cash-on-Cash</th>
+                    <th class="numeric">Gross Yield</th>
+                    <th class="numeric">AVM Gap</th>
+                    <th>Cfg</th>
+                    <th class="numeric">Score</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td class="rank-cell">1</td>
+                    <td class="name-cell">
+                        <a href="#prop-4">Sunridge Drive</a>
+                        <span class="subdiv-cell">Suncrest · St. Cloud</span>
+                    </td>
+                    <td class="numeric">$315,000</td>
+                    <td class="numeric">$15K</td>
+                    <td class="numeric">$102</td>
+                    <td class="numeric"><span class="pos">$+1,523</span></td>
+                    <td class="numeric"><b><span class="pos">+6.1%</span></b></td>
+                    <td class="numeric">8.2%</td>
+                    <td class="numeric"><span class="pos">+7.8%</span></td>
+                    <td>Attached</td>
+                    <td class="numeric">
+                        <span class="score-bar"><span class="score-bar-fill score-fav" style="width: 87%;"></span></span>
+                        <b>87</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="rank-cell">2</td>
+                    <td class="name-cell">
+                        <a href="#prop-3">Sunkissed Drive</a>
+                        <span class="subdiv-cell">Suncrest · St. Cloud</span>
+                    </td>
+                    <td class="numeric">$304,990</td>
+                    <td class="numeric">$5K</td>
+                    <td class="numeric">$34</td>
+                    <td class="numeric"><span class="pos">$+1,560</span></td>
+                    <td class="numeric"><b><span class="pos">+6.2%</span></b></td>
+                    <td class="numeric">8.3%</td>
+                    <td class="numeric"><span class="pos">+1.9%</span></td>
+                    <td>Attached</td>
+                    <td class="numeric">
+                        <span class="score-bar"><span class="score-bar-fill score-fav" style="width: 76%;"></span></span>
+                        <b>76</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="rank-cell">3</td>
+                    <td class="name-cell">
+                        <a href="#prop-7">Citruswood Drive</a>
+                        <span class="subdiv-cell">Enclave at Moss Park · Lake Nona / Orlando 32832</span>
+                    </td>
+                    <td class="numeric">$359,990</td>
+                    <td class="numeric">$60K</td>
+                    <td class="numeric">$409</td>
+                    <td class="numeric"><span class="pos">$+1,538</span></td>
+                    <td class="numeric"><b><span class="pos">+6.2%</span></b></td>
+                    <td class="numeric">9.0%</td>
+                    <td class="numeric"><span class="pos">+3.3%</span></td>
+                    <td>Attached</td>
+                    <td class="numeric">
+                        <span class="score-bar"><span class="score-bar-fill score-fav" style="width: 72%;"></span></span>
+                        <b>72</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="rank-cell">4</td>
+                    <td class="name-cell">
+                        <a href="#prop-9">Stephs Field Drive</a>
+                        <span class="subdiv-cell">Silver Springs · St. Cloud</span>
+                    </td>
+                    <td class="numeric">$374,900</td>
+                    <td class="numeric">$75K</td>
+                    <td class="numeric">$511</td>
+                    <td class="numeric"><span class="pos">$+1,360</span></td>
+                    <td class="numeric"><b><span class="pos">+5.4%</span></b></td>
+                    <td class="numeric">7.7%</td>
+                    <td class="numeric"><span class="pos">+1.8%</span></td>
+                    <td>Detached</td>
+                    <td class="numeric">
+                        <span class="score-bar"><span class="score-bar-fill score-fav" style="width: 67%;"></span></span>
+                        <b>67</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="rank-cell">5</td>
+                    <td class="name-cell">
+                        <a href="#prop-5">Franklin Drive</a>
+                        <span class="subdiv-cell">Split Oak Reserve · St. Cloud</span>
+                    </td>
+                    <td class="numeric">$369,000</td>
+                    <td class="numeric">$69K</td>
+                    <td class="numeric">$471</td>
+                    <td class="numeric"><span class="pos">$+1,324</span></td>
+                    <td class="numeric"><b><span class="pos">+5.3%</span></b></td>
+                    <td class="numeric">7.6%</td>
+                    <td class="numeric"><span class="pos">+4.9%</span></td>
+                    <td>Detached*</td>
+                    <td class="numeric">
+                        <span class="score-bar"><span class="score-bar-fill score-fav" style="width: 66%;"></span></span>
+                        <b>66</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="rank-cell">6</td>
+                    <td class="name-cell">
+                        <a href="#prop-2">Cyrils Drive</a>
+                        <span class="subdiv-cell">Weslyn Park · St. Cloud</span>
+                    </td>
+                    <td class="numeric">$345,000</td>
+                    <td class="numeric">$45K</td>
+                    <td class="numeric">$307</td>
+                    <td class="numeric"><span class="pos">$+1,240</span></td>
+                    <td class="numeric"><b><span class="pos">+5.0%</span></b></td>
+                    <td class="numeric">8.7%</td>
+                    <td class="numeric"><span class="pos">+4.1%</span></td>
+                    <td>Attached</td>
+                    <td class="numeric">
+                        <span class="score-bar"><span class="score-bar-fill score-fav" style="width: 66%;"></span></span>
+                        <b>66</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="rank-cell">7</td>
+                    <td class="name-cell">
+                        <a href="#prop-8">Caspian Drive</a>
+                        <span class="subdiv-cell">Lakeshore at Narcoossee · St. Cloud</span>
+                    </td>
+                    <td class="numeric">$335,000</td>
+                    <td class="numeric">$35K</td>
+                    <td class="numeric">$239</td>
+                    <td class="numeric"><span class="pos">$+1,283</span></td>
+                    <td class="numeric"><b><span class="pos">+5.1%</span></b></td>
+                    <td class="numeric">7.9%</td>
+                    <td class="numeric"><span class="neg">-3.4%</span></td>
+                    <td>Attached</td>
+                    <td class="numeric">
+                        <span class="score-bar"><span class="score-bar-fill score-neu" style="width: 55%;"></span></span>
+                        <b>55</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="rank-cell">8</td>
+                    <td class="name-cell">
+                        <a href="#prop-11">Sunsail Drive</a>
+                        <span class="subdiv-cell">Starwood · Lake Nona / Orlando 32832</span>
+                    </td>
+                    <td class="numeric">$389,990</td>
+                    <td class="numeric">$90K</td>
+                    <td class="numeric">$614</td>
+                    <td class="numeric"><span class="pos">$+1,099</span></td>
+                    <td class="numeric"><b><span class="pos">+4.4%</span></b></td>
+                    <td class="numeric">7.8%</td>
+                    <td class="numeric"><span class="pos">+1.6%</span></td>
+                    <td>Attached</td>
+                    <td class="numeric">
+                        <span class="score-bar"><span class="score-bar-fill score-neu" style="width: 55%;"></span></span>
+                        <b>55</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="rank-cell">9</td>
+                    <td class="name-cell">
+                        <a href="#prop-6">Crossings Drive</a>
+                        <span class="subdiv-cell">Crossings Ph 1 · St. Cloud</span>
+                    </td>
+                    <td class="numeric">$370,000</td>
+                    <td class="numeric">$70K</td>
+                    <td class="numeric">$478</td>
+                    <td class="numeric"><span class="pos">$+1,211</span></td>
+                    <td class="numeric"><b><span class="pos">+4.8%</span></b></td>
+                    <td class="numeric">7.6%</td>
+                    <td class="numeric"><span class="neg">-1.1%</span></td>
+                    <td>Attached</td>
+                    <td class="numeric">
+                        <span class="score-bar"><span class="score-bar-fill score-neu" style="width: 54%;"></span></span>
+                        <b>54</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="rank-cell">10</td>
+                    <td class="name-cell">
+                        <a href="#prop-1">Jubiloso Drive</a>
+                        <span class="subdiv-cell">Sola Vista · St. Cloud</span>
+                    </td>
+                    <td class="numeric">$397,950</td>
+                    <td class="numeric">$98K</td>
+                    <td class="numeric">$668</td>
+                    <td class="numeric"><span class="pos">$+1,096</span></td>
+                    <td class="numeric"><b><span class="pos">+4.4%</span></b></td>
+                    <td class="numeric">7.1%</td>
+                    <td class="numeric"><span class="pos">+1.3%</span></td>
+                    <td>Detached</td>
+                    <td class="numeric">
+                        <span class="score-bar"><span class="score-bar-fill score-neu" style="width: 52%;"></span></span>
+                        <b>52</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="rank-cell">11</td>
+                    <td class="name-cell">
+                        <a href="#prop-10">Town Lake Drive</a>
+                        <span class="subdiv-cell">Ravinia at East Park · Lake Nona / Orlando 32832</span>
+                    </td>
+                    <td class="numeric">$409,000</td>
+                    <td class="numeric">$109K</td>
+                    <td class="numeric">$744</td>
+                    <td class="numeric"><span class="pos">$+754</span></td>
+                    <td class="numeric"><b><span class="pos">+3.0%</span></b></td>
+                    <td class="numeric">7.8%</td>
+                    <td class="numeric"><span class="neg">-1.0%</span></td>
+                    <td>Attached</td>
+                    <td class="numeric">
+                        <span class="score-bar"><span class="score-bar-fill score-cau" style="width: 31%;"></span></span>
+                        <b>31</b>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="font-size: 13px; color: var(--muted);">
+            <b>How to read this table:</b> "Mortgage" is the loan amount needed after deploying your $300K cash. "Debt Svc" is the monthly principal+interest payment at 7.25% / 30-year fixed. "Mo Cash Flow" is rent minus carrying costs minus debt service (before management, vacancy, and capex reserves). "Cash-on-Cash" is annual cash flow divided by your $300K cash deployed.
+        </p>
+    </div>
+</section>
+
+<section id="methodology">
+    <div class="container">
+        <h2>Scoring Methodology</h2>
+        <p class="section-intro">Adapted from a value-and-yield framework with weighting calibrated to your 1031-specific priorities.</p>
+
+        <div class="methodology">
+            <h3>Weight Distribution (1031-Adjusted)</h3>
+            <div class="weight-grid">
+                <div class="weight-item"><span>1031 Fit (cash deployment efficiency, mortgage size)</span><span class="pct">25%</span></div>
+                <div class="weight-item"><span>Cash-on-Cash Yield (after debt service)</span><span class="pct">20%</span></div>
+                <div class="weight-item"><span>AVM Gap (% under RealAVM)</span><span class="pct">15%</span></div>
+                <div class="weight-item"><span>Market Signals (DOM, reduction depth, close speed)</span><span class="pct">15%</span></div>
+                <div class="weight-item"><span>Carrying Cost Efficiency (carry as %, lower better)</span><span class="pct">10%</span></div>
+                <div class="weight-item"><span>Qualitative Flags (motivation, schools, layout, risk)</span><span class="pct">7%</span></div>
+                <div class="weight-item"><span>$/SqFt Value (relative to set)</span><span class="pct">5%</span></div>
+                <div class="weight-item"><span>AVM Confidence (Realist score)</span><span class="pct">3%</span></div>
+            </div>
+        </div>
+
+        <div class="methodology" style="background: #fff7e6; border-left: 4px solid var(--amber);">
+            <h3 style="color: var(--amber);">Important Disclosures</h3>
+            <ul style="margin-left: 20px; font-size: 14px;">
+                <li><b>Mortgage rate assumption:</b> 7.25% / 30-year fixed for investor-occupied 1-4 unit. Your actual rate depends on credit profile, lender, and rate environment at close.</li>
+                <li><b>Cash flow does not include:</b> property management fees (Verandah's 8% of collected rent), vacancy reserves (typical 6-8%), capex reserves (1-2% of value/year), property insurance, or income tax on rental income.</li>
+                <li><b>1031 fit assumes</b> your Philadelphia sale price equals or exceeds the replacement property price. Confirm with your CPA before finalizing identifications.</li>
+                <li><b>RentAVM is directional, not confirmed.</b> Realist's rental estimates require Verandah independent comp confirmation before underwriting.</li>
+                <li><b>Property tax projected at 1.4%</b> of purchase price — current bills include homestead exemptions that will reset upon sale.</li>
+                <li><b>Flood insurance estimate ($1,500/yr placeholder)</b> applied only to Town Lake Drive (Zone AE). Actual quotes vary $800-2,500.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="details">
+    <div class="container">
+        <h2>Detailed Property Analysis — Ranked Order</h2>
+        <p class="section-intro">Full analysis for each property in ranked order, with your 1031-specific deal structure, mortgage terms, and cash flow model.</p>
+        
+
+        <div class="property-detail" id="prop-4">
+            <div class="rank-banner">
+                <div class="rank-num">#1</div>
+                <span class="rank-badge" style="background: var(--green);">TOP PICK</span>
+            </div>
+            <h3>2928 Sunridge Loop</h3>
+            <div class="subdiv-line">Suncrest · St. Cloud · 2 / 2 · 1,601 sqft · Built 2022 · MLS S5144670</div>
+
+            <div class="composite-score">
+                <div>
+                    <div class="score-label">1031 Composite Score</div>
+                    <div class="score-num">87<span style="font-size:18px;color:var(--muted);">/100</span></div>
+                </div>
+                <div class="score-tagline">Largest AVM discount in set + REO clearance mode + sister-unit rental verification — biggest negotiation runway.</div>
+            </div>
+
+            <div class="insight-block" style="background: #f0f7fb; border-left-color: var(--teal);">
+                <b style="color: var(--teal);">Deal Structure:</b> Deploy full <b>$300,000</b> cash + small mortgage of <b>$15,000</b> at 7.25% = <b>$102/mo</b> debt service.
+            </div>
+            
+
+            <div class="metrics-row">
+                <div class="mini-metric">
+                    <div class="label">List Price</div>
+                    <div class="value">$315,000</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">AVM Gap</div>
+                    <div class="value">+7.8%</div>
+                </div>
+                <div class="mini-metric gold">
+                    <div class="label">Mortgage</div>
+                    <div class="value">$15,000</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Monthly Cash Flow</div>
+                    <div class="value">$+1,523</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Cash-on-Cash</div>
+                    <div class="value">+6.1%</div>
+                </div>
+                <div class="mini-metric">
+                    <div class="label">Gross Yield</div>
+                    <div class="value">8.2%</div>
+                </div>
+            </div>
+
+            <div class="insight-block green">
+                <b>Strategic Read for Pete:</b> Largest AVM discount in set + REO clearance mode + sister-unit rental verification — biggest negotiation runway.
+            </div>
+
+            <table class="cost-table" style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 13px;">
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual gross rent (RentAVM × 12)</td>
+                    <td style="padding: 6px 8px; text-align: right; font-weight: bold;">$25,716</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual carrying costs (tax + CDD + HOA)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$6,210</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual debt service (mortgage P+I)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$1,228</td>
+                </tr>
+                <tr style="border-top: 2px solid var(--teal);">
+                    <td style="padding: 8px; font-weight: bold; color: var(--teal);">Annual Cash Flow (before mgmt/vacancy/capex)</td>
+                    <td style="padding: 8px; text-align: right; font-weight: bold; color: var(--teal); font-size: 15px;">$+18,278</td>
+                </tr>
+            </table>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic;">
+                <b>Note:</b> Cash flow is before property management (8% of collected rent), vacancy reserve (typical 6-8%), capex reserve, and standard property insurance. Real-world cash flow will be lower. RentAVM is directional and requires Verandah comp confirmation.
+            </p>
+
+            <a class="back-to-top" href="#ranking">← Back to Ranking Table</a>
+        </div>
+
+        <div class="property-detail" id="prop-3">
+            <div class="rank-banner">
+                <div class="rank-num">#2</div>
+                <span class="rank-badge" style="background: var(--green);">TOP 2</span>
+            </div>
+            <h3>2694 Sunkissed Dr</h3>
+            <div class="subdiv-line">Suncrest · St. Cloud · 2 / 2 · 1,601 sqft · Built 2022 · MLS O6389896</div>
+
+            <div class="composite-score">
+                <div>
+                    <div class="score-label">1031 Composite Score</div>
+                    <div class="score-num">76<span style="font-size:18px;color:var(--muted);">/100</span></div>
+                </div>
+                <div class="score-tagline">Verified rental floor, dual-track exit, single-story townhouse, low carry — clean transaction profile.</div>
+            </div>
+
+            <div class="insight-block" style="background: #f0f7fb; border-left-color: var(--teal);">
+                <b style="color: var(--teal);">Deal Structure:</b> Deploy full <b>$300,000</b> cash + small mortgage of <b>$4,990</b> at 7.25% = <b>$34/mo</b> debt service.
+            </div>
+            
+
+            <div class="metrics-row">
+                <div class="mini-metric">
+                    <div class="label">List Price</div>
+                    <div class="value">$304,990</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">AVM Gap</div>
+                    <div class="value">+1.9%</div>
+                </div>
+                <div class="mini-metric gold">
+                    <div class="label">Mortgage</div>
+                    <div class="value">$4,990</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Monthly Cash Flow</div>
+                    <div class="value">$+1,560</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Cash-on-Cash</div>
+                    <div class="value">+6.2%</div>
+                </div>
+                <div class="mini-metric">
+                    <div class="label">Gross Yield</div>
+                    <div class="value">8.3%</div>
+                </div>
+            </div>
+
+            <div class="insight-block green">
+                <b>Strategic Read for Pete:</b> Verified rental floor, dual-track exit, single-story townhouse, low carry — clean transaction profile.
+            </div>
+
+            <table class="cost-table" style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 13px;">
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual gross rent (RentAVM × 12)</td>
+                    <td style="padding: 6px 8px; text-align: right; font-weight: bold;">$25,200</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual carrying costs (tax + CDD + HOA)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$6,070</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual debt service (mortgage P+I)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$408</td>
+                </tr>
+                <tr style="border-top: 2px solid var(--teal);">
+                    <td style="padding: 8px; font-weight: bold; color: var(--teal);">Annual Cash Flow (before mgmt/vacancy/capex)</td>
+                    <td style="padding: 8px; text-align: right; font-weight: bold; color: var(--teal); font-size: 15px;">$+18,722</td>
+                </tr>
+            </table>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic;">
+                <b>Note:</b> Cash flow is before property management (8% of collected rent), vacancy reserve (typical 6-8%), capex reserve, and standard property insurance. Real-world cash flow will be lower. RentAVM is directional and requires Verandah comp confirmation.
+            </p>
+
+            <a class="back-to-top" href="#ranking">← Back to Ranking Table</a>
+        </div>
+
+        <div class="property-detail" id="prop-7">
+            <div class="rank-banner">
+                <div class="rank-num">#3</div>
+                <span class="rank-badge" style="background: var(--green);">TOP 3</span>
+            </div>
+            <h3>12235 Citruswood Dr</h3>
+            <div class="subdiv-line">Enclave at Moss Park · Lake Nona / Orlando 32832 · 4 / 2.5 · 1,976 sqft · Built 2012 · MLS O6388432</div>
+
+            <div class="composite-score">
+                <div>
+                    <div class="score-label">1031 Composite Score</div>
+                    <div class="score-num">72<span style="font-size:18px;color:var(--muted);">/100</span></div>
+                </div>
+                <div class="score-tagline">Highest yield in set + true Lake Nona address + best schools + 4BR with 1st-floor primary suite. Older build is the trade-off.</div>
+            </div>
+
+            <div class="insight-block" style="background: #f0f7fb; border-left-color: var(--teal);">
+                <b style="color: var(--teal);">Deal Structure:</b> Deploy full <b>$300,000</b> cash + mortgage of <b>$59,990</b> at 7.25% = <b>$409/mo</b> debt service.
+            </div>
+            
+
+            <div class="metrics-row">
+                <div class="mini-metric">
+                    <div class="label">List Price</div>
+                    <div class="value">$359,990</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">AVM Gap</div>
+                    <div class="value">+3.3%</div>
+                </div>
+                <div class="mini-metric gold">
+                    <div class="label">Mortgage</div>
+                    <div class="value">$59,990</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Monthly Cash Flow</div>
+                    <div class="value">$+1,538</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Cash-on-Cash</div>
+                    <div class="value">+6.2%</div>
+                </div>
+                <div class="mini-metric">
+                    <div class="label">Gross Yield</div>
+                    <div class="value">9.0%</div>
+                </div>
+            </div>
+
+            <div class="insight-block green">
+                <b>Strategic Read for Pete:</b> Highest yield in set + true Lake Nona address + best schools + 4BR with 1st-floor primary suite. Older build is the trade-off.
+            </div>
+
+            <table class="cost-table" style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 13px;">
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual gross rent (RentAVM × 12)</td>
+                    <td style="padding: 6px 8px; text-align: right; font-weight: bold;">$32,508</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual carrying costs (tax + CDD + HOA)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$9,144</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual debt service (mortgage P+I)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$4,911</td>
+                </tr>
+                <tr style="border-top: 2px solid var(--teal);">
+                    <td style="padding: 8px; font-weight: bold; color: var(--teal);">Annual Cash Flow (before mgmt/vacancy/capex)</td>
+                    <td style="padding: 8px; text-align: right; font-weight: bold; color: var(--teal); font-size: 15px;">$+18,453</td>
+                </tr>
+            </table>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic;">
+                <b>Note:</b> Cash flow is before property management (8% of collected rent), vacancy reserve (typical 6-8%), capex reserve, and standard property insurance. Real-world cash flow will be lower. RentAVM is directional and requires Verandah comp confirmation.
+            </p>
+
+            <a class="back-to-top" href="#ranking">← Back to Ranking Table</a>
+        </div>
+
+        <div class="property-detail" id="prop-9">
+            <div class="rank-banner">
+                <div class="rank-num">#4</div>
+                
+            </div>
+            <h3>5264 Stephs Field St</h3>
+            <div class="subdiv-line">Silver Springs · St. Cloud · 3+flex / 2.5 · 1,724 sqft · Built 2022 · MLS O6375769</div>
+
+            <div class="composite-score">
+                <div>
+                    <div class="score-label">1031 Composite Score</div>
+                    <div class="score-num">67<span style="font-size:18px;color:var(--muted);">/100</span></div>
+                </div>
+                <div class="score-tagline">True detached SFR with lowest carry % in entire set + REO motivation + flex-room 4th bedroom potential.</div>
+            </div>
+
+            <div class="insight-block" style="background: #f0f7fb; border-left-color: var(--teal);">
+                <b style="color: var(--teal);">Deal Structure:</b> Deploy full <b>$300,000</b> cash + mortgage of <b>$74,900</b> at 7.25% = <b>$511/mo</b> debt service.
+            </div>
+            
+
+            <div class="metrics-row">
+                <div class="mini-metric">
+                    <div class="label">List Price</div>
+                    <div class="value">$374,900</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">AVM Gap</div>
+                    <div class="value">+1.8%</div>
+                </div>
+                <div class="mini-metric gold">
+                    <div class="label">Mortgage</div>
+                    <div class="value">$74,900</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Monthly Cash Flow</div>
+                    <div class="value">$+1,360</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Cash-on-Cash</div>
+                    <div class="value">+5.4%</div>
+                </div>
+                <div class="mini-metric">
+                    <div class="label">Gross Yield</div>
+                    <div class="value">7.7%</div>
+                </div>
+            </div>
+
+            <div class="insight-block amber">
+                <b>Strategic Read for Pete:</b> True detached SFR with lowest carry % in entire set + REO motivation + flex-room 4th bedroom potential.
+            </div>
+
+            <table class="cost-table" style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 13px;">
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual gross rent (RentAVM × 12)</td>
+                    <td style="padding: 6px 8px; text-align: right; font-weight: bold;">$29,016</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual carrying costs (tax + CDD + HOA)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$6,569</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual debt service (mortgage P+I)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$6,131</td>
+                </tr>
+                <tr style="border-top: 2px solid var(--teal);">
+                    <td style="padding: 8px; font-weight: bold; color: var(--teal);">Annual Cash Flow (before mgmt/vacancy/capex)</td>
+                    <td style="padding: 8px; text-align: right; font-weight: bold; color: var(--teal); font-size: 15px;">$+16,316</td>
+                </tr>
+            </table>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic;">
+                <b>Note:</b> Cash flow is before property management (8% of collected rent), vacancy reserve (typical 6-8%), capex reserve, and standard property insurance. Real-world cash flow will be lower. RentAVM is directional and requires Verandah comp confirmation.
+            </p>
+
+            <a class="back-to-top" href="#ranking">← Back to Ranking Table</a>
+        </div>
+
+        <div class="property-detail" id="prop-5">
+            <div class="rank-banner">
+                <div class="rank-num">#5</div>
+                
+            </div>
+            <h3>2765 Franklin Rd</h3>
+            <div class="subdiv-line">Split Oak Reserve · St. Cloud · 3 / 2.5 · 1,748 sqft · Built 2021 · MLS O6394344</div>
+
+            <div class="composite-score">
+                <div>
+                    <div class="score-label">1031 Composite Score</div>
+                    <div class="score-num">66<span style="font-size:18px;color:var(--muted);">/100</span></div>
+                </div>
+                <div class="score-tagline">Owner selling below 2021 cost basis — strongest distress signal in set, plus low carry and conservative RentAVM.</div>
+            </div>
+
+            <div class="insight-block" style="background: #f0f7fb; border-left-color: var(--teal);">
+                <b style="color: var(--teal);">Deal Structure:</b> Deploy full <b>$300,000</b> cash + mortgage of <b>$69,000</b> at 7.25% = <b>$471/mo</b> debt service.
+            </div>
+            
+
+            <div class="metrics-row">
+                <div class="mini-metric">
+                    <div class="label">List Price</div>
+                    <div class="value">$369,000</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">AVM Gap</div>
+                    <div class="value">+4.9%</div>
+                </div>
+                <div class="mini-metric gold">
+                    <div class="label">Mortgage</div>
+                    <div class="value">$69,000</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Monthly Cash Flow</div>
+                    <div class="value">$+1,324</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Cash-on-Cash</div>
+                    <div class="value">+5.3%</div>
+                </div>
+                <div class="mini-metric">
+                    <div class="label">Gross Yield</div>
+                    <div class="value">7.6%</div>
+                </div>
+            </div>
+
+            <div class="insight-block amber">
+                <b>Strategic Read for Pete:</b> Owner selling below 2021 cost basis — strongest distress signal in set, plus low carry and conservative RentAVM.
+            </div>
+
+            <table class="cost-table" style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 13px;">
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual gross rent (RentAVM × 12)</td>
+                    <td style="padding: 6px 8px; text-align: right; font-weight: bold;">$28,080</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual carrying costs (tax + CDD + HOA)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$6,546</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual debt service (mortgage P+I)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$5,648</td>
+                </tr>
+                <tr style="border-top: 2px solid var(--teal);">
+                    <td style="padding: 8px; font-weight: bold; color: var(--teal);">Annual Cash Flow (before mgmt/vacancy/capex)</td>
+                    <td style="padding: 8px; text-align: right; font-weight: bold; color: var(--teal); font-size: 15px;">$+15,886</td>
+                </tr>
+            </table>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic;">
+                <b>Note:</b> Cash flow is before property management (8% of collected rent), vacancy reserve (typical 6-8%), capex reserve, and standard property insurance. Real-world cash flow will be lower. RentAVM is directional and requires Verandah comp confirmation.
+            </p>
+
+            <a class="back-to-top" href="#ranking">← Back to Ranking Table</a>
+        </div>
+
+        <div class="property-detail" id="prop-2">
+            <div class="rank-banner">
+                <div class="rank-num">#6</div>
+                
+            </div>
+            <h3>6491 Cyrils Dr</h3>
+            <div class="subdiv-line">Weslyn Park · St. Cloud · 3 / 3 · 1,855 sqft · Built 2023 · MLS O6401147</div>
+
+            <div class="composite-score">
+                <div>
+                    <div class="score-label">1031 Composite Score</div>
+                    <div class="score-num">66<span style="font-size:18px;color:var(--muted);">/100</span></div>
+                </div>
+                <div class="score-tagline">Strong yield + motivated seller + paid solar, but heaviest HOA in set drags carry %.</div>
+            </div>
+
+            <div class="insight-block" style="background: #f0f7fb; border-left-color: var(--teal);">
+                <b style="color: var(--teal);">Deal Structure:</b> Deploy full <b>$300,000</b> cash + mortgage of <b>$45,000</b> at 7.25% = <b>$307/mo</b> debt service.
+            </div>
+            <div class="insight-block green" style="margin-top: 12px;"><b>📍 You've toured this community.</b> Cyrils Drive is in Weslyn Park, which you visited during your earlier site review. Familiarity with the community is a meaningful advantage — you already know the amenities, layout, and feel.</div>
+
+            <div class="metrics-row">
+                <div class="mini-metric">
+                    <div class="label">List Price</div>
+                    <div class="value">$345,000</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">AVM Gap</div>
+                    <div class="value">+4.1%</div>
+                </div>
+                <div class="mini-metric gold">
+                    <div class="label">Mortgage</div>
+                    <div class="value">$45,000</div>
+                </div>
+                <div class="mini-metric amber">
+                    <div class="label">Monthly Cash Flow</div>
+                    <div class="value">$+1,240</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Cash-on-Cash</div>
+                    <div class="value">+5.0%</div>
+                </div>
+                <div class="mini-metric">
+                    <div class="label">Gross Yield</div>
+                    <div class="value">8.7%</div>
+                </div>
+            </div>
+
+            <div class="insight-block amber">
+                <b>Strategic Read for Pete:</b> Strong yield + motivated seller + paid solar, but heaviest HOA in set drags carry %.
+            </div>
+
+            <table class="cost-table" style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 13px;">
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual gross rent (RentAVM × 12)</td>
+                    <td style="padding: 6px 8px; text-align: right; font-weight: bold;">$29,940</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual carrying costs (tax + CDD + HOA)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$11,374</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual debt service (mortgage P+I)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$3,684</td>
+                </tr>
+                <tr style="border-top: 2px solid var(--teal);">
+                    <td style="padding: 8px; font-weight: bold; color: var(--teal);">Annual Cash Flow (before mgmt/vacancy/capex)</td>
+                    <td style="padding: 8px; text-align: right; font-weight: bold; color: var(--teal); font-size: 15px;">$+14,882</td>
+                </tr>
+            </table>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic;">
+                <b>Note:</b> Cash flow is before property management (8% of collected rent), vacancy reserve (typical 6-8%), capex reserve, and standard property insurance. Real-world cash flow will be lower. RentAVM is directional and requires Verandah comp confirmation.
+            </p>
+
+            <a class="back-to-top" href="#ranking">← Back to Ranking Table</a>
+        </div>
+
+        <div class="property-detail" id="prop-8">
+            <div class="rank-banner">
+                <div class="rank-num">#7</div>
+                
+            </div>
+            <h3>5077 Caspian St</h3>
+            <div class="subdiv-line">Lakeshore at Narcoossee · St. Cloud · 3 / 2.5 · 1,617 sqft · Built 2018 · MLS O6371750</div>
+
+            <div class="composite-score">
+                <div>
+                    <div class="score-label">1031 Composite Score</div>
+                    <div class="score-num">55<span style="font-size:18px;color:var(--muted);">/100</span></div>
+                </div>
+                <div class="score-tagline">Gated community with East Lake Toho access, but list above AVM — only works at AVM-priced offer ($310-320K).</div>
+            </div>
+
+            <div class="insight-block" style="background: #f0f7fb; border-left-color: var(--teal);">
+                <b style="color: var(--teal);">Deal Structure:</b> Deploy full <b>$300,000</b> cash + mortgage of <b>$35,000</b> at 7.25% = <b>$239/mo</b> debt service.
+            </div>
+            
+
+            <div class="metrics-row">
+                <div class="mini-metric">
+                    <div class="label">List Price</div>
+                    <div class="value">$335,000</div>
+                </div>
+                <div class="mini-metric red">
+                    <div class="label">AVM Gap</div>
+                    <div class="value">-3.4%</div>
+                </div>
+                <div class="mini-metric gold">
+                    <div class="label">Mortgage</div>
+                    <div class="value">$35,000</div>
+                </div>
+                <div class="mini-metric amber">
+                    <div class="label">Monthly Cash Flow</div>
+                    <div class="value">$+1,283</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Cash-on-Cash</div>
+                    <div class="value">+5.1%</div>
+                </div>
+                <div class="mini-metric">
+                    <div class="label">Gross Yield</div>
+                    <div class="value">7.9%</div>
+                </div>
+            </div>
+
+            <div class="insight-block amber">
+                <b>Strategic Read for Pete:</b> Gated community with East Lake Toho access, but list above AVM — only works at AVM-priced offer ($310-320K).
+            </div>
+
+            <table class="cost-table" style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 13px;">
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual gross rent (RentAVM × 12)</td>
+                    <td style="padding: 6px 8px; text-align: right; font-weight: bold;">$26,388</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual carrying costs (tax + CDD + HOA)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$8,122</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual debt service (mortgage P+I)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$2,865</td>
+                </tr>
+                <tr style="border-top: 2px solid var(--teal);">
+                    <td style="padding: 8px; font-weight: bold; color: var(--teal);">Annual Cash Flow (before mgmt/vacancy/capex)</td>
+                    <td style="padding: 8px; text-align: right; font-weight: bold; color: var(--teal); font-size: 15px;">$+15,401</td>
+                </tr>
+            </table>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic;">
+                <b>Note:</b> Cash flow is before property management (8% of collected rent), vacancy reserve (typical 6-8%), capex reserve, and standard property insurance. Real-world cash flow will be lower. RentAVM is directional and requires Verandah comp confirmation.
+            </p>
+
+            <a class="back-to-top" href="#ranking">← Back to Ranking Table</a>
+        </div>
+
+        <div class="property-detail" id="prop-11">
+            <div class="rank-banner">
+                <div class="rank-num">#8</div>
+                
+            </div>
+            <h3>11607 Sunsail Ave</h3>
+            <div class="subdiv-line">Starwood · Lake Nona / Orlando 32832 · 3 / 2.5 · 1,491 sqft · Built 2023 · MLS O6369049</div>
+
+            <div class="composite-score">
+                <div>
+                    <div class="score-label">1031 Composite Score</div>
+                    <div class="score-num">55<span style="font-size:18px;color:var(--muted);">/100</span></div>
+                </div>
+                <div class="score-tagline">7-month failed rental test (couldn't lease at $2,400) + highest $/sqft + smallest unit = absorption risk too high.</div>
+            </div>
+
+            <div class="insight-block" style="background: #f0f7fb; border-left-color: var(--teal);">
+                <b style="color: var(--teal);">Deal Structure:</b> Deploy full <b>$300,000</b> cash + mortgage of <b>$89,990</b> at 7.25% = <b>$614/mo</b> debt service.
+            </div>
+            
+
+            <div class="metrics-row">
+                <div class="mini-metric">
+                    <div class="label">List Price</div>
+                    <div class="value">$389,990</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">AVM Gap</div>
+                    <div class="value">+1.6%</div>
+                </div>
+                <div class="mini-metric gold">
+                    <div class="label">Mortgage</div>
+                    <div class="value">$89,990</div>
+                </div>
+                <div class="mini-metric amber">
+                    <div class="label">Monthly Cash Flow</div>
+                    <div class="value">$+1,099</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Cash-on-Cash</div>
+                    <div class="value">+4.4%</div>
+                </div>
+                <div class="mini-metric">
+                    <div class="label">Gross Yield</div>
+                    <div class="value">7.8%</div>
+                </div>
+            </div>
+
+            <div class="insight-block amber">
+                <b>Strategic Read for Pete:</b> 7-month failed rental test (couldn't lease at $2,400) + highest $/sqft + smallest unit = absorption risk too high.
+            </div>
+
+            <table class="cost-table" style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 13px;">
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual gross rent (RentAVM × 12)</td>
+                    <td style="padding: 6px 8px; text-align: right; font-weight: bold;">$30,360</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual carrying costs (tax + CDD + HOA)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$9,806</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual debt service (mortgage P+I)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$7,367</td>
+                </tr>
+                <tr style="border-top: 2px solid var(--teal);">
+                    <td style="padding: 8px; font-weight: bold; color: var(--teal);">Annual Cash Flow (before mgmt/vacancy/capex)</td>
+                    <td style="padding: 8px; text-align: right; font-weight: bold; color: var(--teal); font-size: 15px;">$+13,187</td>
+                </tr>
+            </table>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic;">
+                <b>Note:</b> Cash flow is before property management (8% of collected rent), vacancy reserve (typical 6-8%), capex reserve, and standard property insurance. Real-world cash flow will be lower. RentAVM is directional and requires Verandah comp confirmation.
+            </p>
+
+            <a class="back-to-top" href="#ranking">← Back to Ranking Table</a>
+        </div>
+
+        <div class="property-detail" id="prop-6">
+            <div class="rank-banner">
+                <div class="rank-num">#9</div>
+                <span class="rank-badge" style="background: var(--red);">CAUTION</span>
+            </div>
+            <h3>387 Crossings Ave</h3>
+            <div class="subdiv-line">Crossings Ph 1 · St. Cloud · 3 / 2.5 · 1,923 sqft · Built 2025 · MLS S5144381</div>
+
+            <div class="composite-score">
+                <div>
+                    <div class="score-label">1031 Composite Score</div>
+                    <div class="score-num">54<span style="font-size:18px;color:var(--muted);">/100</span></div>
+                </div>
+                <div class="score-tagline">Newest build (2025) with owner-provided rental ask, but list above AVM and modest motivation.</div>
+            </div>
+
+            <div class="insight-block" style="background: #f0f7fb; border-left-color: var(--teal);">
+                <b style="color: var(--teal);">Deal Structure:</b> Deploy full <b>$300,000</b> cash + mortgage of <b>$70,000</b> at 7.25% = <b>$478/mo</b> debt service.
+            </div>
+            
+
+            <div class="metrics-row">
+                <div class="mini-metric">
+                    <div class="label">List Price</div>
+                    <div class="value">$370,000</div>
+                </div>
+                <div class="mini-metric amber">
+                    <div class="label">AVM Gap</div>
+                    <div class="value">-1.1%</div>
+                </div>
+                <div class="mini-metric gold">
+                    <div class="label">Mortgage</div>
+                    <div class="value">$70,000</div>
+                </div>
+                <div class="mini-metric amber">
+                    <div class="label">Monthly Cash Flow</div>
+                    <div class="value">$+1,211</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Cash-on-Cash</div>
+                    <div class="value">+4.8%</div>
+                </div>
+                <div class="mini-metric">
+                    <div class="label">Gross Yield</div>
+                    <div class="value">7.6%</div>
+                </div>
+            </div>
+
+            <div class="insight-block red">
+                <b>Strategic Read for Pete:</b> Newest build (2025) with owner-provided rental ask, but list above AVM and modest motivation.
+            </div>
+
+            <table class="cost-table" style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 13px;">
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual gross rent (RentAVM × 12)</td>
+                    <td style="padding: 6px 8px; text-align: right; font-weight: bold;">$28,200</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual carrying costs (tax + CDD + HOA)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$7,940</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual debt service (mortgage P+I)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$5,730</td>
+                </tr>
+                <tr style="border-top: 2px solid var(--teal);">
+                    <td style="padding: 8px; font-weight: bold; color: var(--teal);">Annual Cash Flow (before mgmt/vacancy/capex)</td>
+                    <td style="padding: 8px; text-align: right; font-weight: bold; color: var(--teal); font-size: 15px;">$+14,530</td>
+                </tr>
+            </table>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic;">
+                <b>Note:</b> Cash flow is before property management (8% of collected rent), vacancy reserve (typical 6-8%), capex reserve, and standard property insurance. Real-world cash flow will be lower. RentAVM is directional and requires Verandah comp confirmation.
+            </p>
+
+            <a class="back-to-top" href="#ranking">← Back to Ranking Table</a>
+        </div>
+
+        <div class="property-detail" id="prop-1">
+            <div class="rank-banner">
+                <div class="rank-num">#10</div>
+                <span class="rank-badge" style="background: var(--red);">CAUTION</span>
+            </div>
+            <h3>5329 Jubiloso Dr</h3>
+            <div class="subdiv-line">Sola Vista · St. Cloud · 4 / 3.5 · 2,364 sqft · Built 2019 · MLS O6384282</div>
+
+            <div class="composite-score">
+                <div>
+                    <div class="score-label">1031 Composite Score</div>
+                    <div class="score-num">52<span style="font-size:18px;color:var(--muted);">/100</span></div>
+                </div>
+                <div class="score-tagline">Largest detached SFR with biggest lot, but mild seller motivation and weakest school zone.</div>
+            </div>
+
+            <div class="insight-block" style="background: #f0f7fb; border-left-color: var(--teal);">
+                <b style="color: var(--teal);">Deal Structure:</b> Deploy full <b>$300,000</b> cash + mortgage of <b>$97,950</b> at 7.25% = <b>$668/mo</b> debt service.
+            </div>
+            
+
+            <div class="metrics-row">
+                <div class="mini-metric">
+                    <div class="label">List Price</div>
+                    <div class="value">$397,950</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">AVM Gap</div>
+                    <div class="value">+1.3%</div>
+                </div>
+                <div class="mini-metric gold">
+                    <div class="label">Mortgage</div>
+                    <div class="value">$97,950</div>
+                </div>
+                <div class="mini-metric amber">
+                    <div class="label">Monthly Cash Flow</div>
+                    <div class="value">$+1,096</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Cash-on-Cash</div>
+                    <div class="value">+4.4%</div>
+                </div>
+                <div class="mini-metric">
+                    <div class="label">Gross Yield</div>
+                    <div class="value">7.1%</div>
+                </div>
+            </div>
+
+            <div class="insight-block red">
+                <b>Strategic Read for Pete:</b> Largest detached SFR with biggest lot, but mild seller motivation and weakest school zone.
+            </div>
+
+            <table class="cost-table" style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 13px;">
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual gross rent (RentAVM × 12)</td>
+                    <td style="padding: 6px 8px; text-align: right; font-weight: bold;">$28,284</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual carrying costs (tax + CDD + HOA)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$7,119</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual debt service (mortgage P+I)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$8,018</td>
+                </tr>
+                <tr style="border-top: 2px solid var(--teal);">
+                    <td style="padding: 8px; font-weight: bold; color: var(--teal);">Annual Cash Flow (before mgmt/vacancy/capex)</td>
+                    <td style="padding: 8px; text-align: right; font-weight: bold; color: var(--teal); font-size: 15px;">$+13,147</td>
+                </tr>
+            </table>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic;">
+                <b>Note:</b> Cash flow is before property management (8% of collected rent), vacancy reserve (typical 6-8%), capex reserve, and standard property insurance. Real-world cash flow will be lower. RentAVM is directional and requires Verandah comp confirmation.
+            </p>
+
+            <a class="back-to-top" href="#ranking">← Back to Ranking Table</a>
+        </div>
+
+        <div class="property-detail" id="prop-10">
+            <div class="rank-banner">
+                <div class="rank-num">#11</div>
+                <span class="rank-badge" style="background: var(--red);">CAUTION</span>
+            </div>
+            <h3>10033 Town Lake Dr</h3>
+            <div class="subdiv-line">Ravinia at East Park · Lake Nona / Orlando 32832 · 3 / 2+2 · 2,305 sqft · Built 2016 · MLS O6378416</div>
+
+            <div class="composite-score">
+                <div>
+                    <div class="score-label">1031 Composite Score</div>
+                    <div class="score-num">31<span style="font-size:18px;color:var(--muted);">/100</span></div>
+                </div>
+                <div class="score-tagline">Lake Nona address and pond view, but FLOOD ZONE AE + heaviest carry + zero reductions = no investor case at list.</div>
+            </div>
+
+            <div class="insight-block" style="background: #f0f7fb; border-left-color: var(--teal);">
+                <b style="color: var(--teal);">Deal Structure:</b> Deploy full <b>$300,000</b> cash + larger mortgage of <b>$109,000</b> at 7.25% = <b>$744/mo</b> debt service. 27% LTV.
+            </div>
+            
+
+            <div class="metrics-row">
+                <div class="mini-metric">
+                    <div class="label">List Price</div>
+                    <div class="value">$409,000</div>
+                </div>
+                <div class="mini-metric amber">
+                    <div class="label">AVM Gap</div>
+                    <div class="value">-1.0%</div>
+                </div>
+                <div class="mini-metric gold">
+                    <div class="label">Mortgage</div>
+                    <div class="value">$109,000</div>
+                </div>
+                <div class="mini-metric red">
+                    <div class="label">Monthly Cash Flow</div>
+                    <div class="value">$+754</div>
+                </div>
+                <div class="mini-metric green">
+                    <div class="label">Cash-on-Cash</div>
+                    <div class="value">+3.0%</div>
+                </div>
+                <div class="mini-metric">
+                    <div class="label">Gross Yield</div>
+                    <div class="value">7.8%</div>
+                </div>
+            </div>
+
+            <div class="insight-block red">
+                <b>Strategic Read for Pete:</b> Lake Nona address and pond view, but FLOOD ZONE AE + heaviest carry + zero reductions = no investor case at list.
+            </div>
+
+            <table class="cost-table" style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 13px;">
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual gross rent (RentAVM × 12)</td>
+                    <td style="padding: 6px 8px; text-align: right; font-weight: bold;">$32,112</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual carrying costs (tax + CDD + HOA)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$14,146</td>
+                </tr>
+                <tr>
+                    <td style="padding: 6px 8px; color: #555;">Annual debt service (mortgage P+I)</td>
+                    <td style="padding: 6px 8px; text-align: right;">−$8,923</td>
+                </tr>
+                <tr style="border-top: 2px solid var(--teal);">
+                    <td style="padding: 8px; font-weight: bold; color: var(--teal);">Annual Cash Flow (before mgmt/vacancy/capex)</td>
+                    <td style="padding: 8px; text-align: right; font-weight: bold; color: var(--teal); font-size: 15px;">$+9,043</td>
+                </tr>
+            </table>
+            <p style="font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic;">
+                <b>Note:</b> Cash flow is before property management (8% of collected rent), vacancy reserve (typical 6-8%), capex reserve, and standard property insurance. Real-world cash flow will be lower. RentAVM is directional and requires Verandah comp confirmation.
+            </p>
+
+            <a class="back-to-top" href="#ranking">← Back to Ranking Table</a>
+        </div>
+    </div>
+</section>
+
+<section id="next-steps">
+    <div class="container">
+        <h2>Recommended Next Steps</h2>
+        <p class="section-intro">A 1031-specific path from this analysis to identification and acquisition.</p>
+
+        <div class="action-block">
+            <h4><span class="step-num">1</span>Confirm Your Philadelphia Numbers with Your CPA</h4>
+            <p>Before formal identification, work with your CPA to confirm:</p>
+            <ul>
+                <li>Expected Philadelphia sale price (your minimum replacement target)</li>
+                <li>Outstanding Philly mortgage balance (your minimum new debt target for full deferral)</li>
+                <li>Total transaction costs and expected net proceeds (your cash position)</li>
+                <li>Whether you have a qualified intermediary engaged — required to hold proceeds during exchange</li>
+            </ul>
+        </div>
+
+        <div class="action-block">
+            <h4><span class="step-num">2</span>Verandah Rental Comp Confirmation — Top 3</h4>
+            <p>Before formal identification, Verandah pulls independent rental comps within 0.5–1 mile of your top 3. Converts directional yield numbers into underwritable income figures so your cash flow assumptions are defensible:</p>
+            <ul>
+                <li><b>Sunridge:</b> Suncrest 2BR townhouse rental velocity at $2,100–2,150</li>
+                <li><b>Sunkissed:</b> already partially validated via sister-unit live ask at $2,150 — supporting comps from Verandah</li>
+                <li><b>Citruswood:</b> Lake Nona 4BR townhouse rental at $2,650–2,800 with 1st-floor primary premium</li>
+            </ul>
+        </div>
+
+        <div class="action-block">
+            <h4><span class="step-num">3</span>Lender Pre-Approval (If Not Already in Place)</h4>
+            <p>You'll need investor mortgage pre-approval for any property above $300K — which is 9 of the 11. Recommend pre-approval well before identification deadline. Verandah can introduce you to local investor-focused lenders who understand 1031 timelines.</p>
+        </div>
+
+        <div class="action-block">
+            <h4><span class="step-num">4</span>Three-Property Identification Strategy</h4>
+            <p>The IRS "three property rule" is the safe-harbor approach for 1031 identification. Recommend identifying:</p>
+            <ul>
+                <li><b>Primary target — Sunridge Loop ($315,000):</b> best AVM discount, smallest mortgage, REO seller motivated to clear</li>
+                <li><b>Backup target — Sunkissed Drive ($304,990):</b> cleanest transaction, fastest close, near-all-cash deployment</li>
+                <li><b>Stretch target — Citruswood Drive ($359,990):</b> highest yield, true Lake Nona address, larger upside if mortgage rate cooperates</li>
+            </ul>
+            <p>If primary falls through, you have two qualified backups within identification — protecting your tax deferral.</p>
+        </div>
+
+        <div class="action-block">
+            <h4><span class="step-num">5</span>Offer Strategy &amp; Sequencing</h4>
+            <ul>
+                <li><b>First offer — Sunridge at $290–295K cash, 45-day close:</b> Fannie Mae HomePath via RES.NET portal, full proof of funds. Realistic counter range $300–308K. Mortgage drops to ~$0.</li>
+                <li><b>If Sunridge falls through — Sunkissed at $290–298K cash, 30-day close:</b> Private seller, smoothest transaction. Counter range $295–302K.</li>
+                <li><b>If both fall through — Citruswood at $342–348K cash, 30-day close:</b> LLC investor seller. Counter range $350–355K. Larger mortgage component but still under $50K.</li>
+            </ul>
+        </div>
+
+        <div class="action-block">
+            <h4><span class="step-num">6</span>Verandah's Role Through Closing &amp; Beyond</h4>
+            <ul>
+                <li>Rental comp confirmation and underwriting support</li>
+                <li>On-site walkthroughs of identified properties</li>
+                <li>Coordination with your qualified intermediary and lender on 1031 timeline</li>
+                <li>Offer preparation and contingency drafting (1031 contingency clause is essential)</li>
+                <li>Post-close: lease-up marketing, tenant screening, full property management</li>
+                <li>SureVestor Landlord Shield enrollment for GL coverage with no deductible</li>
+                <li>Experian rent reporting via AppFolio for tenant retention</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer class="report-footer">
+    <div class="container">
+        <div class="brand">VERANDAH PROPERTIES LLC</div>
+        <div>Lake Nona's Property Management Standard</div>
+        <div style="margin-top: 12px; font-size: 12px;">
+            Prepared by Pamela Syvertson, Owner &amp; Broker · May 4, 2026<br>
+            For Pete (Piush) Patel · 1031 Exchange Replacement Property Analysis
+        </div>
+        <div class="disclaimer">
+            This report represents a directional value-and-yield analysis for 1031 exchange decision support. RealAVM™ values courtesy of CoreLogic via Stellar MLS Realist. All rental yield figures are MLS-derived RentAVM estimates and require independent rental comp confirmation before underwriting. Property tax projections at 1.4% of purchase price are normalized estimates. Mortgage assumptions of 7.25% / 30-year fixed reflect current investor rates as of May 2026 and may vary at close. Verandah Properties LLC is not a tax advisor, financial advisor, qualified intermediary, or licensed appraiser. This analysis does not constitute investment, tax, or legal advice. Pete is strongly encouraged to engage a qualified intermediary, CPA familiar with 1031 exchanges, and competent real estate attorney to guide the transaction.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
